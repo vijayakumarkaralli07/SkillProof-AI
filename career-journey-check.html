@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Journey UI Check</title>
+  </head>
+  <body>
+    <div id="preview-root"></div>
+    <script type="module">
+      import React from 'react'
+      import { createRoot } from 'react-dom/client'
+      import { BrowserRouter } from 'react-router-dom'
+      import CareerToolsPage from './src/pages/CareerToolsPage.jsx'
+      import './src/styles/global.css'
+      import './src/styles/dashboard.css'
+      import './src/styles/career-tools.css'
+      import './src/styles/resume-workspace.css'
+      import './src/styles/career-journey.css'
+
+      window.history.replaceState({}, '', '/interview-prep/build-career')
+      createRoot(document.querySelector('#preview-root')).render(
+        React.createElement(
+          BrowserRouter,
+          null,
+          React.createElement(CareerToolsPage, { user: { id: 'career-preview-user', user_metadata: { full_name: 'Preview User' } }, onSignOut: async () => {} }),
+        ),
+      )
+    </script>
+  </body>
+</html>

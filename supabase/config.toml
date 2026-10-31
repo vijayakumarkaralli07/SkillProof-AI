@@ -1,0 +1,8 @@
+[functions.resume-ai]
+verify_jwt = true
+
+[functions.jobs-search]
+verify_jwt = true
+
+[functions.coding-execution]
+verify_jwt = true
